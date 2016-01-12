@@ -1,0 +1,64 @@
+﻿@model ASS3.Models.Course
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Course</h2>
+
+@if (ViewBag.count > 0)
+{
+    <h3 class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>There are students enrolled in this couse. It cannot be deleted.</h3>
+}
+else
+{
+    <h3>Are you sure you want to delete this?</h3>
+}
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Years)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "Index") |
+            <input type="submit" value="Delete" class="btn btn-primary @(ViewBag.count > 0 ? "disabled" : "")" />
+        </div>
+    }
+</div>

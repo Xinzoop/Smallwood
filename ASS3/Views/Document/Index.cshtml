@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Documentation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $('#accordion').accordion();
+        });
+    </script>
+}
+
+<h2>Documentation</h2>
+
+<div id="accordion">
+    <h3>Assignment Details</h3>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>Author Name</dt>
+            <dd>Peng Zhao</dd>
+            <dt>Student ID</dt>
+            <dd>25661043</dd>
+            <dt>Unit Name</dt>
+            <dd>FIT5032 Internet Application Development</dd>
+            <dt>Unit Provider</dt>
+            <dd>Monash University, The Caulfield School of Information Technology</dd>
+            <dt>Assignment No.</dt>
+            <dd>3</dd>
+            <dt>Submission Date</dt>
+            <dd>23/10/2015</dd>
+            <dt>Tutor Name</dt>
+            <dd>Linh Nhat Chu</dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:pzha75@student.monash.edu">pzha75@student.monash.edu</a></dd>
+            <dt>Specification</dt>
+            <dd><a href="~/Content/FIT5032-S2-2015 Assignment 3 Details.pdf" target="_blank">FIT5032-S2-2015 Assignment 3 Details.pdf</a></dd>
+        </dl>
+    </div>
+
+    <h3>Image Details</h3>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Image</td>
+                    <td>Author</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="~/Content/Images/owl-47526_640.png" class="img-thumbnail" alt="owl" width="120" height="120" /></td>
+                    <td>
+                        <dl class="dl-horizontal">
+                            <dt>Author</dt>
+                            <dd>ClkerFreeVectorImages</dd>
+                            <dt>Website</dt>
+                            <dd><a href="https://pixabay.com/en/owl-bird-book-wise-nature-47526/" target="_blank">https://pixabay.com/en/owl-bird-book-wise-nature-47526/</a></dd>
+                        </dl>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="~/Content/Images/leave-364178_640.jpg" class="img-thumbnail" alt="study" width="120" height="120" /></td>
+                    <td>
+                        <dl class="dl-horizontal">
+                            <dt>Author</dt>
+                            <dd>geralt</dd>
+                            <dt>Website</dt>
+                            <dd><a href="https://pixabay.com/en/leave-board-hand-learn-note-364178/" target="_blank">https://pixabay.com/en/leave-board-hand-learn-note-364178/</a></dd>
+                        </dl>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Additional MVC Functionality</h3>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>#</td><td>Page</td><td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Courses/Index; Students/Index</td>
+                    <td>Change the default display name using <strong>[Displayformat]</strong> annotation.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Courses/Index; Students/Index</td>
+                    <td>Using <strong>PartialView</strong> to reduce page refreshing.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Courses/Index; Students/Index</td>
+                    <td>Using <strong>PagedList.Mvc</strong> to render large number of records in multiple pages.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Courses/Delete</td>
+                    <td>Check if a course can be deleted; Display warning message and disable delete button if no.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>jQuery Functionality</h3>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Page</td>
+                    <td>Description</td>
+                    <td>Link</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Courses/Index; Students/Index</td>
+                    <td>Implementation search and paging using <strong>jQuery AJAX</strong> to reduce page refreshing.</td>
+                    <td><a href="https://jqueryui.com/">jqueryui.com</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Document/Index</td>
+                    <td>Using <strong>jQuery Accordion</strong> to format various categories of information.</td>
+                    <td><a href="https://jqueryui.com/">jqueryui.com</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Courses/Edit; Students/Edit</td>
+                    <td>Using <strong>jQuery Tooltip</strong> to guide user operation.</td>
+                    <td><a href="https://jqueryui.com/">jqueryui.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

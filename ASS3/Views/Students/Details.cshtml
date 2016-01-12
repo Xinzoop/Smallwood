@@ -1,0 +1,63 @@
+﻿@model ASS3.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Details</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Content/Images/owl-47526_640.png" class="img-thumbnail" alt="owl" width="240" height="240" />
+    </div>
+    <div class="col-md-4">
+        <dl class="dl-horizontal">
+            <dt>
+                #
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.fname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.lname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.lname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.enrol_date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.enrol_date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Course.Code)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Course.Code)
+            </dd>
+
+        </dl>
+        <p>
+            @Html.ActionLink("Back to List", "Index") |
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+        </p>
+    </div>
+</div>
+

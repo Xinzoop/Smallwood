@@ -1,0 +1,55 @@
+﻿@model PagedList.IPagedList<ASS3.Models.Student>
+@using PagedList.Mvc;
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().enrol_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Course.Code)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.enrol_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Code)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+@Html.PagedListPager(Model, page => Url.Action("Search", new { page }))
