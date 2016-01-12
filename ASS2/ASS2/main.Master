@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.OleDb" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script runat="server">
+    
+        // Retain events for displayed month
+        private DataTable daysWithEvents;
+        protected void Page_Load()
+        {
+            RetrieveEvents();
+            if(!IsPostBack)
+                updateEvents(DateTime.Today);
+        }
+
+        // Retrieve events
+        private void RetrieveEvents()
+        {
+            // Retrieve events occurring
+            using (OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["userDB"].ToString()))
+            {
+                try
+                {
+                    conn.Open();
+                    String sql = "SELECT * FROM [EVENT] ORDER BY [ETIME]";
+                    OleDbCommand command = new OleDbCommand(sql, conn);
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+                    daysWithEvents = new DataTable();
+                    adapter.Fill(daysWithEvents);
+                }
+                catch (Exception ex)
+                {
+                    lblEvent.Text = ex.Message;
+                    lblEvent.ForeColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+        // Get events for specified date
+        private DataTable getEvents(DateTime date)
+        {
+            if (null == daysWithEvents || daysWithEvents.Rows.Count == 0)
+                return null;
+            DataTable data = daysWithEvents.Copy();
+            for(int i = data.Rows.Count - 1; i>=0; --i)
+            {
+                DataRow row = data.Rows[i];
+                if(!row["EDATE"].Equals(date))
+                {
+                    data.Rows.RemoveAt(i);
+                }
+            }
+            return data;
+        }
+
+        private void updateEvents(DateTime date)
+        {
+            DataTable data = getEvents(date);
+            lvEvent.DataSource = data;
+            lvEvent.DataBind();
+
+            String dateText = "Today";
+            if (date != DateTime.Today)
+                dateText = "on " + date.ToShortDateString();
+            // Change display style
+            if (data.Rows.Count > 0)
+            {
+                lblEvent.Text = "" + data.Rows.Count + " Events " + dateText + ".";
+                lblEvent.ForeColor = System.Drawing.Color.Yellow;
+                cal1.TodayDayStyle.CssClass = "cal_today_e";
+            }
+            else
+            {
+                lblEvent.Text = "No Events " + dateText + ".";
+                lblEvent.ForeColor = System.Drawing.Color.White;
+            }
+        }
+        
+        // Update events after selecting day
+        protected void cal1_SelectionChanged(object sender, EventArgs e)
+        {
+            updateEvents(cal1.SelectedDate);
+        }
+        // Highlight the days with events 
+        protected void cal1_DayRender(object sender, DayRenderEventArgs e)
+        {
+            DataTable data = getEvents(e.Day.Date);
+            // Highlight days with events
+            if (null != data && data.Rows.Count > 0)
+            {
+                e.Cell.BackColor = System.Drawing.Color.Yellow;
+            }
+        }
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="header">
+            <div class="logo">
+                <asp:HyperLink runat="server" NavigateUrl="~/index.aspx">
+                    <asp:Image ID="logo" runat="server" ImageUrl="~/images/logo.png" />
+                </asp:HyperLink>
+            </div>
+            <div class="slogon">
+                <asp:Label ID="slogon" runat="server" Text="IT Developer Community"></asp:Label>
+            </div>
+            <div class="login_view">
+                <asp:LoginName ID="LoginName1" runat="server" FormatString="Welcome, {0} |" />
+                <asp:LoginStatus ID="login_status" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/index.aspx" />
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="bar">
+            <asp:SiteMapPath ID="sitepath" runat="server"></asp:SiteMapPath>
+        </div>
+        <div class="middle">
+            <div class="side">
+                <asp:Menu ID="menu" runat="server" CssClass="menu" DataSourceID="siteMapSrc" StaticDisplayLevels="2">
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="SiteMapNode" NavigateUrlField="Url" ToolTipField="Description" />
+                    </DataBindings>
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="siteMapSrc" runat="server" />
+                <br />
+                <div class="curtain_wrapper">
+                    <asp:Image ID="curtain" SkinID="curtain" CssClass="curtain" runat="server" />
+                    <div>
+                        <asp:Label ID="Label1" runat="server" Text="Author: Peng Zhao (Peter)"></asp:Label>
+                    </div>
+                </div>
+                <div class="cal_wrapper">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="cal1" />
+                        </Triggers>
+                        <ContentTemplate>
+                            <asp:Calendar ID="cal1" CssClass="cal" runat="server" OnSelectionChanged="cal1_SelectionChanged"
+                                 OnDayRender="cal1_DayRender">
+                                <TitleStyle CssClass="cal_title" />
+                                <NextPrevStyle CssClass="cal_nexpre" />
+                                <DayHeaderStyle CssClass="cal_header" />
+                                <DayStyle CssClass="cal_day" />
+                                <SelectedDayStyle CssClass="cal_sel" />
+                                <OtherMonthDayStyle CssClass="cal_other" />
+                                <TodayDayStyle CssClass="cal_today" />
+                            </asp:Calendar>
+                            <div class="event_wrapper">
+                                <div>
+                                    <asp:Label ID="lblEvent" runat="server" Text="No Events Today."></asp:Label>
+                                </div>
+                                <asp:ListView ID="lvEvent" runat="server">
+                                    <LayoutTemplate>
+                                        <table runat="server" class="event_view">
+                                            <tr runat="server" id="itemPlaceholder"></tr>
+                                        </table>
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                        <tr runat="server">
+                                            <td runat="server">
+                                                <asp:Label ID="Label2" runat="server" Text='<%#Convert.ToDateTime(Eval("etime")).ToString("HH:mm") %>'></asp:Label>
+                                            </td>
+                                            <td runat="server">
+                                                <asp:Label ID="Label3" runat="server" Text='<%#Eval("edesc") %>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </ItemTemplate>
+                                </asp:ListView>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear" />
+        <div class="footer">
+            <asp:Label ID="copyright" runat="server" CssClass="copyright" Text="Copyright: 2015 smallwood. Designed & Created by Peng Zhao"></asp:Label>
+        </div>
+    </form>
+</body>
+</html>

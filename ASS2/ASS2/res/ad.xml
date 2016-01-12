@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>../images/w3s.png</ImageUrl>
+    <NavigateUrl>http://www.w3schools.com/</NavigateUrl>
+    <AlternateText>
+      w3schools.com - The World's Largest Web Designer Site
+    </AlternateText>
+    <Keyword>web designer</Keyword>
+  </Ad>
+  
+  <Ad>
+    <ImageUrl>../images/tp.png</ImageUrl>
+    <NavigateUrl>http://www.tutorialspoint.com/</NavigateUrl>
+    <AlternateText>
+      tutorialspoint.com -  Simply Easy Learning
+    </AlternateText>
+    <Keyword>IT development</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>../images/ost-logo.png</ImageUrl>
+    <NavigateUrl>http://opensourcetemplates.org/</NavigateUrl>
+    <AlternateText>
+      opensourcetemplates.com -  The original free templates
+    </AlternateText>
+    <Keyword>free templates</Keyword>
+  </Ad>
+</Advertisements>

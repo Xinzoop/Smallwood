@@ -1,0 +1,50 @@
+﻿*{
+}
+body{
+    background-color:lightgray;
+    height:100%;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+.header{
+    height:100px;
+}
+.bar{
+    height:20px;
+    background-color:darkgray;
+}
+
+.middle{
+
+}
+
+.side{
+    width:318px;
+    float:left;
+}
+.content{
+    margin-left:320px;
+    background-color:white;
+}
+.footer{
+    clear:both;
+    position:absolute;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
+.menu{
+    background-color:mintcream;
+}
+.curtain{
+   width:120px;
+   height:120px;
+}
+.cal{
+    width:80%;
+    margin:auto;
+}
+.copyright{
+    margin:auto;
+    width:60%;
+}

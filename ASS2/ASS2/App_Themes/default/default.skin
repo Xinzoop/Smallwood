@@ -1,0 +1,31 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Image runat="server" SkinId="curtain" ImageUrl="~/images/curtain.jpg" />
+<asp:Image runat="server" SkinId="submit" ImageUrl="~/images/submit.jpg" />
+<asp:Image runat="server" SkinId="hut" ImageUrl="~/images/hut.jpg" />
+<asp:Image runat="server" SkinId="computer" ImageUrl="~/images/computer.jpg" />
+<asp:Image runat="server" SkinId="codebuttonAboutus" ImageUrl="~/images/codebuttonAboutus.jpg" />
+<asp:Image runat="server" SkinId="codebuttonAddRecords" ImageUrl="~/images/codebuttonAddRecords.jpg" />
+<asp:Image runat="server" SkinId="codebuttonAddrotator" ImageUrl="~/images/codebuttonAddrotator.jpg" />
+<asp:Image runat="server" SkinId="codebuttonCSS" ImageUrl="~/images/codebuttonCSS.jpg" />
+<asp:Image runat="server" SkinId="codebuttondisplayrecords" ImageUrl="~/images/codebuttondisplayrecords.jpg" />
+<asp:Image runat="server" SkinId="codebuttonEmail" ImageUrl="~/images/codebuttonEmail.jpg" />
+<asp:Image runat="server" SkinId="codebuttonlogin" ImageUrl="~/images/codebuttonlogin.jpg" />
+<asp:Image runat="server" SkinId="codebuttonMasterPage" ImageUrl="~/images/codebuttonMasterPage.jpg" />
+<asp:Image runat="server" SkinId="codebuttonsearchrecords" ImageUrl="~/images/codebuttonsearchrecords.jpg" />
+<asp:Image runat="server" SkinId="codebuttonSiteMap" ImageUrl="~/images/codebuttonSiteMap.jpg" />
+<asp:Image runat="server" SkinId="codebuttonSkin" ImageUrl="~/images/codebuttonSkin.jpg" />

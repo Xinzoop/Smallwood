@@ -1,0 +1,452 @@
+﻿* {
+}
+
+html {
+}
+
+body {
+    background-color: mintcream;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+    color: blue;
+}
+
+.header {
+    height: 80px;
+}
+
+.clear {
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px;
+    color: white;
+}
+
+    .logo a img {
+        border: none;
+    }
+
+.slogon {
+    float: left;
+    font-family: 'Berlin Sans FB', Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    padding-top: 50px;
+    padding-left: 30px;
+    color: #b200ff;
+}
+.login_view{
+    float:right;
+    padding-right:20px;
+    padding-top:55px;
+    font-size:large;
+    font-weight:bold;
+}
+.login_view a{
+    text-decoration:none;
+}
+.login_view a:hover{
+    color:#b200ff;
+}
+
+.bar {
+    height: 30px;
+    background-color: #0094ff; /*205ca1*/
+    color: white;
+    font-size: large;
+    padding-top: 16px;
+    padding-left: 20px;
+}
+
+    .bar a {
+        color: white;
+    }
+
+        .bar a:hover {
+            color: #b200ff;
+        }
+
+.middle {
+    overflow: auto;
+    background-color: #CCE6FF;
+}
+
+.side {
+    width: 258px;
+    float: left;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+    margin-left: 300px;
+    background-color: white;
+    min-height: 600px;
+}
+
+.footer {
+    clear: both;
+    height: 26px;
+    background-color: #CCE6FF;
+    font-weight: normal;
+    color: #205ca1;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.menu a:hover {
+    color: #b200ff;
+}
+
+.curtain_wrapper {
+}
+
+    .curtain_wrapper > * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .curtain_wrapper > img {
+        width: 260px;
+        height: 260px;
+        display: block;
+    }
+
+    .curtain_wrapper > div {
+        width: 260px;
+        height: 30px;
+        text-align: center;
+        background-color: #0094ff;
+        color: white;
+        font-weight: bold;
+    }
+
+.cal_wrapper {
+    margin: 40px 0;
+}
+
+.cal {
+    width:260px;
+    height:220px;
+    border:none !important;
+}
+    .cal a:hover {
+        color: #b200ff !important;
+    }
+
+.cal_sel {
+    background-color: coral !important;
+}
+
+    .cal_sel a {
+        color: white !important;
+    }
+
+.cal_nexpre a {
+    color: wheat !important;
+}
+
+.cal_day a {
+    color: #0094ff !important;
+}
+
+.cal a {
+    text-decoration: none;
+    color: white;
+}
+
+.cal_title{
+    background-color: #0094ff;
+    color: wheat;
+    font-weight: bold;
+    height: 40px;
+    border:none !important;
+}
+
+.cal_header {
+    color: #0094ff;
+}
+
+.cal_other a {
+    color: gray !important;
+}
+
+.cal_today {
+
+}
+.cal_today_e{
+
+}
+
+.welcome {
+}
+
+.links a:hover{        
+    color: #b200ff !important;
+}
+
+.ad {
+    width: 60%;
+    height: 100px;
+    margin: auto;
+}
+
+    .ad a img {
+        border: none;
+    }
+
+.reg_cat {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.reg {
+    width: 90%;
+    font-size: large;
+}
+
+    .reg table {
+        width: 100%;
+    }
+
+.reg_left {
+    width: 30%;
+}
+
+.reg_middle {
+    width: 40%;
+}
+
+    .reg_middle > * {
+        width: 96%;
+        padding: 3px 0px;
+        margin: 3px 0;
+    }
+
+.reg_req {
+    border: #0094ff 2px solid;
+}
+
+.reg_right {
+    width: 30%;
+    color: red;
+}
+
+.submit {
+    text-align: center;
+    padding: 20px;
+}
+
+    .submit > input {
+        width: 108px;
+        height: 37px;
+        background-image: url('../../images/submit.jpg');
+    }
+
+.note {
+    font-style:italic;
+    font-size:small;
+}
+
+.detail {
+    width: 60%;
+}
+
+    .detail > table {
+        width: 100%;
+    }
+
+.detail_title {
+    font-weight: bold;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.detail_left {
+    width: 40%;
+}
+
+.detail_right {
+    width: 60%;
+    font-weight: bold;
+}
+
+.faq_wrapper > ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.faq_q:hover {
+    cursor: pointer;
+    color: #b200ff;
+}
+
+.faq_a {
+    display: none;
+    margin-left: 20px;
+}
+
+.faq_cur > .faq_q {
+    color: #0094ff;
+}
+
+.sitemap_wrapper {
+    font-size: large;
+}
+
+    .sitemap_wrapper a:hover {
+        color: #b200ff;
+    }
+
+.doc_wrapper {
+}
+
+.doc_cat {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.doc_left {
+    width: 30%;
+}
+.topic{
+    width:100%;
+    height:300px;
+}
+.computer{
+    float:right;
+    width:300px;
+    height:120px;
+}
+
+.code{
+    padding:20px;
+}
+.code>span{
+    font-size:x-large;
+    font-weight:bold;
+}
+
+.code_wrapper{
+    background-color:#CCE6FF;
+    border:solid 1px gray;
+    padding:20px;
+}
+a img{
+    border:none;
+}
+.record_wrapper{
+    
+}
+.record_header{
+    background-color:#0094ff;
+    color:white;
+    font-weight:bold;
+    font-size:large;
+}
+.record_view td,th{
+    padding:5px;
+}
+.err_msg{
+    color:red;
+}
+#search_user{
+
+}
+.login_error{
+    color:red;
+    font-weight:bold;
+    display:inline-block;
+    padding:20px;
+}
+
+.login *{
+    padding:6px 2px;
+}
+
+.login_fail{
+    font-weight:bold;
+}
+.login_title{
+    font-size:x-large;
+    padding-bottom:20px;
+}
+.login_label{
+    font-weight:bold;
+}
+.login_btn{
+    background-color:#0094ff;
+    color:white;
+    font-weight:bold;
+    padding:4px;
+    font-size:large;
+}
+.login table tr td:last-child{
+    text-align:center;
+}
+.login_tbx{
+    border: #0094ff 2px solid;
+    width:240px;
+}
+.email_wrapper, .email_wrapper td{
+    border:1px solid gray;
+    margin:0;
+    padding:0;
+}
+.email_wrapper *{
+    margin:0;
+    padding:0;
+}
+.email_wrapper td:first-child{
+    width:140px;
+    background-color:#0094ff;
+    color:white;
+    font-weight:bold;
+}
+.email_wrapper td:last-child *{
+    width:360px;
+    border:none;
+}
+.email_wrapper tr:last-child *{
+    height:240px;
+}
+.btn{
+    background-color:#0094ff;
+    color:white;
+    font-weight:bold;
+    padding:4px;
+    font-size:large;
+}
+.email_msg{
+    font-weight:bold;
+}
+.event_wrapper{
+    width:260px;
+    margin:30px 0;
+}
+.event_wrapper div{
+    text-align:center;
+    background-color:#0094ff;
+    font-weight:bold;
+    font-size:large;
+}
+.event_view{
+    border:1px solid gray;
+    width:100%;
+}
+.event_view td{
+    border:1px solid gray;
+}
+.event_view td:first-child{
+    font-weight:bold;
+    width:20%;
+}

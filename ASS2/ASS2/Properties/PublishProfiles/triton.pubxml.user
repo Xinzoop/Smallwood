@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcpwDutGdxkyECAMBIopqIgAAAAACAAAAAAAQZgAAAAEAACAAAACqWoyL2Ql8U2crn4IBGk0W5JarPYligloA8YcW2zb9ngAAAAAOgAAAAAIAACAAAABDJfZUPlN7FG8PGmlnaiGw769J/ICFgP7FCW27AibPjCAAAAC1RPcMDAr7Gi0LyAbNUUHCdPjAfE/2uAfttSvBeetqkEAAAABYj5nuh97MV56ebs8XMhRQIMC+WG8nwq2KcPwKQWhr2a74N0luAeYsbEb1lo0LGhHg9YN7dwha5cx80uMDHhRH</EncryptedPassword>
+    <_PublishTargetUrl>ftp://triton.infotech.monash.edu.au/fit5032/25661043/ass1</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_GlobalResources/Main.en-AU.resx">
+      <publishTime>08/23/2015 12:03:41</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Main.resx">
+      <publishTime>08/27/2015 10:35:01</publishTime>
+    </File>
+    <File Include="App_GlobalResources/string.resx">
+      <publishTime>08/22/2015 17:30:58</publishTime>
+    </File>
+    <File Include="App_Themes/default/default.css">
+      <publishTime>08/27/2015 11:16:07</publishTime>
+    </File>
+    <File Include="App_Themes/default/default.skin">
+      <publishTime>08/22/2015 17:11:59</publishTime>
+    </File>
+    <File Include="bin/ASS1.dll">
+      <publishTime>08/27/2015 11:54:07</publishTime>
+    </File>
+    <File Include="doc.aspx">
+      <publishTime>08/21/2015 18:59:59</publishTime>
+    </File>
+    <File Include="faq.aspx">
+      <publishTime>08/21/2015 19:00:04</publishTime>
+    </File>
+    <File Include="history.aspx">
+      <publishTime>08/21/2015 19:00:04</publishTime>
+    </File>
+    <File Include="home.aspx">
+      <publishTime>08/23/2015 16:48:03</publishTime>
+    </File>
+    <File Include="images/curtain.jpg">
+      <publishTime>08/22/2015 17:08:00</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>08/22/2015 16:10:05</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>08/21/2015 18:48:19</publishTime>
+    </File>
+    <File Include="main.css">
+      <publishTime>08/21/2015 19:04:41</publishTime>
+    </File>
+    <File Include="main.Master">
+      <publishTime>08/27/2015 11:55:53</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>08/21/2015 18:47:52</publishTime>
+    </File>
+    <File Include="registration.aspx">
+      <publishTime>08/21/2015 19:00:04</publishTime>
+    </File>
+    <File Include="test.html">
+      <publishTime>08/22/2015 14:15:55</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/27/2015 11:54:10</publishTime>
+    </File>
+    <File Include="web.sitemap">
+      <publishTime>08/22/2015 16:54:18</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

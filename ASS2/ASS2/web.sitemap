@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="./index.aspx" title="Home"  description="Home page">
+    <siteMapNode url="./registration.aspx" title="Registration"  description="User registration page" />
+    <siteMapNode url="./locked/email.aspx" title="Email Hub"  description="Email Hub" />
+    <siteMapNode url="./locked/aboutus.aspx" title="About Us"  description="About us page">
+      <siteMapNode url="./locked/history.aspx" title="Our History"  description="Our history" />
+      <siteMapNode url="./locked/faq.aspx" title="FAQ"  description="Freqently Asked Questions" />
+    </siteMapNode>
+    <siteMapNode url="./locked/sitemap.aspx" title="Sitemap" description="Site map" />
+    <siteMapNode url="./locked/doc.aspx" title="Documentation"  description="Documentation page" />
+  </siteMapNode>
+</siteMap>
