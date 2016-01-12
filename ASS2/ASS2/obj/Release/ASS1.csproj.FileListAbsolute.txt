@@ -1,6 +1,0 @@
-F:\Projects\FIT5032\ASS1\ASS1\bin\ASS1.dll.config
-F:\Projects\FIT5032\ASS1\ASS1\bin\ASS1.dll
-F:\Projects\FIT5032\ASS1\ASS1\bin\ASS1.pdb
-F:\Projects\FIT5032\ASS1\ASS1\obj\Release\ASS1.csprojResolveAssemblyReference.cache
-F:\Projects\FIT5032\ASS1\ASS1\obj\Release\ASS1.dll
-F:\Projects\FIT5032\ASS1\ASS1\obj\Release\ASS1.pdb
